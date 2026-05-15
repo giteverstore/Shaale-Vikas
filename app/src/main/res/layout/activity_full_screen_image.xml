@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <!-- Full Screen Photo 640x640 centered -->
+    <ImageView
+        android:id="@+id/iv_full_photo"
+        android:layout_width="640dp"
+        android:layout_height="640dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:contentDescription="Full screen profile photo"
+        android:visibility="gone" />
+
+    <!-- Letter Avatar Background -->
+    <FrameLayout
+        android:id="@+id/tv_letter_avatar"
+        android:layout_width="640dp"
+        android:layout_height="640dp"
+        android:layout_gravity="center"
+        android:background="@color/primary_green"
+        android:visibility="gone">
+
+        <!-- Centered Circle with Letter -->
+        <TextView
+            android:id="@+id/tv_letter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="200sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+
+    </FrameLayout>
+
+    <!-- Toolbar (semi-transparent black) -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="top"
+        android:background="#AA000000"
+        app:titleTextColor="@android:color/white"
+        app:subtitleTextColor="#CCFFFFFF"
+        app:navigationIconTint="@android:color/white"
+        app:title="" />
+
+</FrameLayout>

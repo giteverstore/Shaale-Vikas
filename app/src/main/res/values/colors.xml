@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_green">#2E7D32</color>
+    <color name="primary_green_dark">#1B5E20</color>
+    <color name="primary_green_light">#4CAF50</color>
+    <color name="green_light">#E8F5E9</color>
+    <color name="accent_amber">#FFA000</color>
+    <color name="background_light">#F5F5F5</color>
+    <color name="background_card">#FFFFFF</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="badge_gold">#FFD700</color>
+    <color name="badge_silver">#C0C0C0</color>
+    <color name="badge_bronze">#CD7F32</color>
+    <color name="urgency_critical">#D32F2F</color>
+    <color name="urgency_high">#F57C00</color>
+    <color name="urgency_medium">#388E3C</color>
+    <color name="ic_launcher_background">#FFFFFF</color>
+</resources>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- Handle Bar -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/handle_bar" />
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Profile Photo"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="12dp" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F0F0F0" />
+
+    <!-- ── VIEW PHOTO ── -->
+    <LinearLayout
+        android:id="@+id/layout_view_photo"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+
+        <FrameLayout
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="16dp">
+
+            <!-- Circle bg (color set in code) -->
+            <View
+                android:id="@+id/view_view_photo_bg"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:background="@drawable/circle_solid" />
+
+            <!-- Icon -->
+            <ImageView
+                android:id="@+id/iv_view_photo"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_visibility"
+                android:contentDescription="View photo" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_view_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Photo"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_view_photo_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See your current photo"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Thin Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F5F5F5"
+        android:layout_marginHorizontal="20dp" />
+
+    <!-- ── UPLOAD PHOTO ── -->
+    <LinearLayout
+        android:id="@+id/layout_edit_photo"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+
+        <FrameLayout
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="16dp">
+
+            <View
+                android:id="@+id/view_edit_photo_bg"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:background="@drawable/circle_solid" />
+
+            <ImageView
+                android:id="@+id/iv_edit_photo"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_edit"
+                android:contentDescription="Upload photo" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_edit_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload Photo"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_edit_photo_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose from gallery"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Thin Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F5F5F5"
+        android:layout_marginHorizontal="20dp" />
+
+    <!-- ── REMOVE PHOTO ── -->
+    <LinearLayout
+        android:id="@+id/layout_remove_photo"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+
+        <FrameLayout
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="16dp">
+
+            <View
+                android:id="@+id/view_remove_photo_bg"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:background="@drawable/circle_solid" />
+
+            <ImageView
+                android:id="@+id/iv_remove_photo"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_delete"
+                android:contentDescription="Remove photo" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_remove_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove Photo"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_remove_photo_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete current photo"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Thick Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="#F5F5F5"
+        android:layout_marginTop="8dp" />
+
+    <!-- Cancel -->
+    <TextView
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:text="Cancel"
+        android:textSize="16sp"
+        android:textColor="#757575"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginBottom="8dp" />
+
+</LinearLayout>

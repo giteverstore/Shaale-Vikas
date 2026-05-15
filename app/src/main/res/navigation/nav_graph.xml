@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.shaalevikas.app.ui.dashboard.DashboardFragment"
+        android:label="Needs"
+        tools:layout="@layout/fragment_dashboard">
+
+        <action
+            android:id="@+id/action_dashboard_to_detail"
+            app:destination="@id/needDetailFragment" />
+
+        <action
+            android:id="@+id/action_dashboard_to_create"
+            app:destination="@id/createNeedFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/needDetailFragment"
+        android:name="com.shaalevikas.app.ui.needdetail.NeedDetailFragment"
+        android:label="Need Detail"
+        tools:layout="@layout/fragment_need_detail">
+        <argument
+            android:name="needId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createNeedFragment"
+        android:name="com.shaalevikas.app.ui.admin.CreateNeedFragment"
+        android:label="Publish Need"
+        tools:layout="@layout/fragment_create_need" />
+
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.shaalevikas.app.ui.gallery.ImpactGalleryFragment"
+        android:label="Gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/hallOfFameFragment"
+        android:name="com.shaalevikas.app.ui.halloffame.HallOfFameFragment"
+        android:label="Hall of Fame"
+        tools:layout="@layout/fragment_hall_of_fame" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.shaalevikas.app.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>

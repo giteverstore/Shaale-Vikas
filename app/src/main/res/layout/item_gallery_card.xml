@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Category + Pledge Count Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="13sp"
+                android:textColor="#757575" />
+
+            <TextView
+                android:id="@+id/tv_pledge_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="@color/primary_green" />
+
+        </LinearLayout>
+
+        <!-- BEFORE Label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📷 BEFORE"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:background="#FF5722"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:padding="6dp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Before Photo -->
+        <ImageView
+            android:id="@+id/iv_before_photo"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Before photo"
+            android:background="#F5F5F5"
+            android:layout_marginBottom="12dp" />
+
+        <!-- AFTER Label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="✅ AFTER"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:background="@color/primary_green"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:padding="6dp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- After Photo -->
+        <ImageView
+            android:id="@+id/iv_after_photo"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="After photo"
+            android:background="#F5F5F5"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Amount Raised -->
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_green" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

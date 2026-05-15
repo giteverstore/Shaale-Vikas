@@ -1,0 +1,23 @@
+# Built files
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Build directories
+build/
+.gradle/
+captures/
+
+# Local files
+local.properties
+*.jks
+*.keystore
+
+# IDE files
+.idea/
+*.iml
+.DS_Store
+
+# Google Services
+#google-services.json

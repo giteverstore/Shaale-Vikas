@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="@color/primary_green">
+
+    <!-- Custom Photo -->
+    <ImageView
+        android:id="@+id/iv_full_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="Profile photo full view"
+        android:visibility="gone" />
+
+    <!-- Letter Avatar (shown when no custom photo) -->
+    <TextView
+        android:id="@+id/tv_letter_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="100sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+</FrameLayout>

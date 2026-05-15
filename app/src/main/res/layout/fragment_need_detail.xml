@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary_green"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="Need Details" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Fulfilled Badge -->
+            <TextView
+                android:id="@+id/tv_fulfilled_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✅ FULFILLED"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="6dp"
+                android:background="@drawable/badge_medium"
+                android:visibility="gone"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Category + Urgency -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tv_category"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary" />
+
+                <TextView
+                    android:id="@+id/tv_urgency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/primary_green" />
+            </LinearLayout>
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:lineSpacingMultiplier="1.4"
+                android:layout_marginBottom="16dp" />
+
+            <!-- BEFORE Label -->
+            <TextView
+                android:id="@+id/tv_before_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📷 BEFORE"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:background="#FF5722"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:padding="6dp"
+                android:layout_marginBottom="4dp"
+                android:visibility="gone" />
+
+            <!-- Before Photo -->
+            <ImageView
+                android:id="@+id/iv_before_photo"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="Before photo"
+                android:background="@color/background_light"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp" />
+
+            <!-- AFTER Photo -->
+            <TextView
+                android:id="@+id/tv_after_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✅ AFTER"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:textColor="@color/primary_green"
+                android:visibility="gone"
+                android:layout_marginBottom="4dp" />
+
+            <ImageView
+                android:id="@+id/iv_after_photo"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="After photo"
+                android:background="@color/background_light"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp" />
+
+            <!-- After photo status -->
+            <TextView
+                android:id="@+id/tv_after_photo_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/primary_green"
+                android:visibility="gone"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Funding Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/green_light">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_cost_estimate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_target"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:id="@+id/tv_pledged"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_green"
+                        android:layout_marginTop="4dp" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="12dp"
+                        android:progressDrawable="@drawable/progress_drawable" />
+
+                    <TextView
+                        android:id="@+id/tv_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/primary_green" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Pledgers -->
+            <TextView
+                android:id="@+id/tv_pledger_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tv_pledgers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="16dp" />
+
+            <!-- ADMIN FULFILL SECTION -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/admin_fulfill_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="@color/primary_green"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="👑 Admin: Mark as Fulfilled"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/primary_green"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upload an after photo to show the completed work"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginBottom="12dp" />
+
+                    <!-- Pick After Photo Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_pick_after_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="📁 Choose After Photo"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        app:strokeColor="@color/primary_green"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Fulfill Progress -->
+                    <ProgressBar
+                        android:id="@+id/fulfill_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Confirm Fulfill Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_confirm_fulfill"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="✅ Confirm Fulfilled"
+                        android:visibility="gone"
+                        app:backgroundTint="@color/primary_green" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Pledge Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_pledge"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_margin="16dp"
+        android:text="🤝 Pledge to Support This Need"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:backgroundTint="@color/primary_green" />
+
+</LinearLayout>

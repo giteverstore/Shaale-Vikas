@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shaale-Vikas</string>
+    <string name="app_name_kannada">ಶಾಲೆ-ವಿಕಾಸ</string>
+    <string name="tagline">School-Alumni Bridge</string>
+    <string name="needs_dashboard">School Needs Dashboard</string>
+    <string name="pledge_button">🤝 Pledge Support</string>
+    <string name="hall_of_fame">🏆 Donor Hall of Fame</string>
+    <string name="impact_gallery">Impact Gallery</string>
+    <string name="publish_need">Publish a Need</string>
+    <string name="ai_suggest">✨ AI Suggest</string>
+    <string name="simulated_note">No real money — simulated commitment</string>
+
+    <string-array name="categories">
+        <item>Furniture</item>
+        <item>Sanitation</item>
+        <item>Classroom</item>
+        <item>Sports</item>
+        <item>Misc</item>
+    </string-array>
+
+    <string-array name="urgency_levels">
+        <item>Critical</item>
+        <item>High</item>
+        <item>Medium</item>
+    </string-array>
+</resources>
