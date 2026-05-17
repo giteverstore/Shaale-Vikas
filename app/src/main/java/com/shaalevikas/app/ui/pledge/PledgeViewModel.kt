@@ -69,15 +69,20 @@ class PledgeViewModel @Inject constructor(
                 val result = pledgeRepository.makePledge(pledge)
 
                 if (result.isSuccess) {
-                    needsRepository.updatePledgedAmount(needId, amount)
-                    _state.postValue(PledgeState.Success)
-                } else {
-                    _state.postValue(
-                        PledgeState.Error(
-                            result.exceptionOrNull()?.message
-                                ?: "Pledge failed"
+
+                    val updateResult =
+                        needsRepository.updatePledgedAmount(needId, amount)
+
+                    if (updateResult.isSuccess) {
+                        _state.postValue(PledgeState.Success)
+                    } else {
+                        _state.postValue(
+                            PledgeState.Error(
+                                updateResult.exceptionOrNull()?.message
+                                    ?: "Failed to update need totals"
+                            )
                         )
-                    )
+                    }
                 }
             } catch (e: Exception) {
                 _state.postValue(

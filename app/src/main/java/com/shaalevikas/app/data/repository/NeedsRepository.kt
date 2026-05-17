@@ -54,12 +54,19 @@ class NeedsRepository @Inject constructor(
     fun getNeedById(needId: String): Flow<Need?> = callbackFlow {
         val listener = needsCollection.document(needId)
             .addSnapshotListener { snapshot, error ->
+
                 if (error != null) {
                     trySend(null)
                     return@addSnapshotListener
                 }
-                trySend(snapshot?.toObject(Need::class.java))
+
+                val need = snapshot?.toObject(Need::class.java)?.copy(
+                    id = snapshot.id
+                )
+
+                trySend(need)
             }
+
         awaitClose { listener.remove() }
     }
 

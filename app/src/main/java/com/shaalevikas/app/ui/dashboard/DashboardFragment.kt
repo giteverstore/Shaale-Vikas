@@ -42,12 +42,23 @@ class DashboardFragment : Fragment() {
         savedInstanceState: Bundle?
     ) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.fabAddNeed.apply {
+            visibility = View.VISIBLE
+            alpha = 1f
+            scaleX = 1f
+            scaleY = 1f
+            bringToFront()
+        }
+
         setupRecyclerView()
         setupSearch()
         setupCategoryChips()
         observeNeeds()
         observeUserRole()
         setupFab()
+
+        android.util.Log.d("DashboardFragment", "FAB = ${binding.fabAddNeed}")
     }
 
     private fun setupFab() {
@@ -70,13 +81,18 @@ class DashboardFragment : Fragment() {
             ) {
                 viewModel.userRoleFlow.collect { role ->
                     _binding?.let {
-                        if (role == "admin") {
+                        val isAdmin = role.trim().lowercase() == "admin"
+
+                        android.util.Log.d("DashboardFragment", "ROLE = $role")
+
+                        if (role.equals("admin", ignoreCase = true)) {
+                            it.fabAddNeed.visibility = View.VISIBLE
                             it.fabAddNeed.show()
                         } else {
+                            it.fabAddNeed.visibility = View.GONE
                             it.fabAddNeed.hide()
                         }
-                        adapter.updateAdminStatus(role == "admin")
-                    }
+                        adapter.updateAdminStatus(isAdmin)                    }
                 }
             }
         }

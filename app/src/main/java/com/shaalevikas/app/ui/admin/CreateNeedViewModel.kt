@@ -43,7 +43,7 @@ class CreateNeedViewModel @Inject constructor(
         try {
             GenerativeModel(
                 modelName = "gemini-1.5-flash",
-                apiKey    = "YOUR_GEMINI_API_KEY_HERE"
+                apiKey    = "AIzaSyCkw94i0xkOM0eesr_cs-b0eS4_j08ueMw"
             )
         } catch (e: Exception) {
             null
